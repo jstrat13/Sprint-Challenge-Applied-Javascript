@@ -7,3 +7,14 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+
+const promise = axios.get('https://lambda-times-backend.herokuapp.com/topics');
+
+promise
+    .then ((data) => {
+        console.log('data: ', data);
+    })
+    .catch((err) => {
+        console.log('error: ', err);
+    })
